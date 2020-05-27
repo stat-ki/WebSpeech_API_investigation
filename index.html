@@ -7,6 +7,7 @@
             window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
             var recognition = new webkitSpeechRecognition();
             recognition.lang = 'ja';
+            recognition.continuous = true;
             recognition.onresult = function(event){
                 var results = event.results;
                 for (var i = event.resultIndex; i<results.length; i++)
